@@ -3,12 +3,12 @@ import TaskListItem from "./TaskListItem";
 import { useState } from "react";
 
 export function TaskList() {
-  const [tasks, setTasks] = useState([{ description: "teste" }]);
+  const [tasks, setTasks] = useState([{ id: "1", description: "teste" }]);
   const [newTask, setNewTask] = useState("");
 
   const createTask = () => {
     console.log("teste");
-    setTasks([...tasks, { description: newTask }]);
+    setTasks([...tasks, { id: "", description: newTask }]);
     setNewTask("");
   };
   return (
